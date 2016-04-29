@@ -22,6 +22,7 @@ import CoreLocation
             
             UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: 0.75, initialSpringVelocity: 0.6, options: .BeginFromCurrentState, animations: { [weak self] in
                 self?.invalidateIntrinsicContentSize()
+                self?.superview?.setNeedsLayout()
                 self?.superview?.layoutIfNeeded()
                 }, completion: nil)
         }
