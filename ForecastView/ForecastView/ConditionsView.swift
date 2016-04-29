@@ -71,7 +71,7 @@ class ConditionsView: UIView {
     private func didUpdateForecast() {
         if let forecast = forecast, let conditionsLabel = conditionsLabel, let conditionsImageView = conditionsImageView {
             conditionsLabel.text = "\(forecast.high.value)˚"
-            conditionsImageView.image = UIImage(named: forecast.conditions.icon)
+            conditionsImageView.image = UIImage(named: forecast.conditions.icon, inBundle: NSBundle(forClass: ConditionsView.self), compatibleWithTraitCollection: nil)
         }
     }
     
